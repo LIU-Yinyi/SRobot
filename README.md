@@ -43,7 +43,6 @@ Basic class List:
 	class SInputInterface;				//数据输入接口定义
 	class SOutputInterface;				//数据输出接口定义
 	class SMessage;						//消息
-	class SAerialRobot;
 ```
 ---
 
@@ -79,21 +78,21 @@ git remote show <remote>
 ##### Add a new submodule
 Beware of the submodule name you choose: If you use a forward slash (/) git will think you want to delete the submodule and want to add all the files in the submodule directory. Please DON'T use a forward slash after the submodule name.
 
-1. Run git submodule add -b <branch> --name <name> <repository-path-or-url>
-2. Add the .gitmodule file and submodule folder to the superproject index
+1. Run `git submodule add -b <branch> --name <name> <repository-path-or-url>`
+2. Add the `.gitmodule` file and submodule folder to the superproject index
 3. Commit both files on the superproject
 
 ##### Remove a submodule
-1. Delete the relevant line from the .gitmodules file
-2. Delete the relevant section from .git/config
-3. Run git rm --cached <submodule-path> (no trailing slash)
+1. Delete the relevant line from the `.gitmodules` file
+2. Delete the relevant section from `.git/config`
+3. Run `git rm --cached <submodule-path>` (no trailing slash)
 4. Commit the superproject
 5. Delete the now untracked submodule files
 
 ##### Clone a project with submodules
 1. Clone the superproject as usual
-2. Run git submodule init to init the submodules
-3. Run git submodule update to have the submodules on a detached HEAD   
+2. Run `git submodule init` to init the submodules
+3. Run `git submodule update` to have the submodules on a detached HEAD   
 
 or
 
