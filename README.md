@@ -1,8 +1,8 @@
 ## SRobot Libraires
-- Author: Google
+- Author: DWJ, Lin Xiaoya(All except SCity); Google(SCity Hash)
 - Revised: Jackie Wu, blues, Rui Yang, hongwen000, Champion-Liu
-- Date: 2018-9-13
-- Version: 2.0.3
+- Date: 2018-9-16
+- Version: 2.0.4
 - Abstract: Pratical Libraries for Robot Development. Education Only.
 
 ---
@@ -57,6 +57,24 @@ sudo make install
 ---
 
 ### Use Git Submodule in Project
+Add submodules in project like `Chickens`:
+
+```bash
+# create a common file directory
+cd Chickens
+mkdir submodules
+cd submodules
+
+# add submodules
+git submodules add -b master --name submodules/SRobot https://github.com/Champion-Liu/SRobot.git
+git commit -m "add submodules of SRobot"
+git push
+```
+
+
+---
+
+### Appendix: git submodules usages
 
 ##### Make changes, commit and checkout submodule files
 Just go the submodule directory and use git as usual
