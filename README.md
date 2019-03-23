@@ -1,8 +1,8 @@
 ## SRobot Libraires
-- Author: DWJ, Lin Xiaoya(All except SCity); Google(SCity Hash)
-- Revised: Jackie Wu, blues, Rui Yang, hongwen000, Champion-Liu
-- Date: 2018-9-16
-- Version: 2.0.4
+- Author: DENG Wenjun, LIN Xiaoya(All except SCity); Google(SCity Hash)
+- Revised: WU Kan, LAI Ziliang, YANG Rui, LI Xinrui, LIU Yinyi
+- Date: 2019-3-23
+- Version: 2.1.0
 - Abstract: Pratical Libraries for Robot Development. Education Only.
 
 ---
@@ -50,8 +50,39 @@ Basic class List:
 For linux:
 
 ```bash
+# install
+mkdir build
+cmake ..
 make -j16
 sudo make install
+
+#validate
+pkg-config --cflags --libs SRobot
+```
+
+---
+
+### Usage
+Examples:
+
+```cpp
+#include <SRobot.h>
+#include <iostream>
+
+using namespace SRobot;
+
+int main()
+{
+	SVector2 vec(1, 2);
+	std::cout << vec.length() << std::endl;
+	return 0;
+}
+```
+
+Compile:
+
+```
+g++ main.cpp -o test `pkg-config --cflags --libs SRobot`
 ```
 
 ---
