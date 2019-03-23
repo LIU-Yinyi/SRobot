@@ -85,6 +85,16 @@ Compile:
 g++ main.cpp -o test `pkg-config --cflags --libs SRobot`
 ```
 
+For CMakeLists.txt:
+
+```
+find_package(PkgConfig)
+pkg_check_modules(SRobot REQUIRED SRobot)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${SRobot_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${SRobot_LIBRARIES})
+```
+
 ---
 
 ### Use Git Submodule in Project
